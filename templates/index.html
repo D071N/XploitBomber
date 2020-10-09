@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>XploitBomber</title>
+
+  </head>
+  <body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">XploitBomber</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+<!--        <a class="nav-link" href="/admin">Admin Panel</a>-->
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+    <!-- NAVBAR END -->
+    <!-- form -->
+
+<div class="container shadow p-4" style="margin-top:70px;">
+
+<div class="container-fluid" >
+    <div class="row">
+        <div class="col-6 col-sm-6 col-md-5 col-lg-4 mx-auto">
+            <h3>XploitBomber</h3>
+
+            {% if messages %}
+            {% for msg in messages %}
+            <div class="alert alert-{{msg.tags}} alert-dismissible fade show" role="alert">
+                {{ msg }}
+
+                <button type="button" class="close" data-dismiss="alert" area-label="Close">
+                    <span area-hidden-true>&times;</span>
+                </button>
+            </div>
+            {% endfor %}
+            {% endif %}
+
+            <form action="/doattack/" method="post">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <input type="text" class="form-control" name="mn" autocomplete="on" placeholder="Target Mobile Number" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="fq" placeholder="Number Of Sms" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-outline-success px-4" value="Start Bombing">
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--<form action="/doattack" method="get" style="margin-left:100px;margin-right: 100px;margin-top: 100px;">-->
+<!--    {% csrf_token %}-->
+<!--  <div class="form-group">-->
+<!--    <label >Mobile Number </label>-->
+<!--    <input name="mn" class="form-control" id="mnno">-->
+<!--    <small  class="form-text text-muted">Enter A Valid Mobile Number Without ( + , - ,91 ) </small>-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+<!--    <label >NUMBER OF SMS</label>-->
+<!--    <input name="fq" class="form-control" id="freq">-->
+<!--  </div>-->
+
+
+<!--  <button type="submit" class="btn btn-primary">Submit</button>-->
+<!--</form>-->
+
+    <!-- form end -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </body>
+</html>
