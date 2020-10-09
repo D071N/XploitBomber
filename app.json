@@ -1,0 +1,7 @@
+{
+  "name": "XploitBomber",
+  "description": "A Web Based Bomber Using Django And Python",
+  "repository": "https://github.com/Chaudharyramandahiya/BombX",
+  "logo": "https://avatars0.githubusercontent.com/u/55348093?s=200&v=4",
+  "keywords": ["XploitBomber", "SMS Bomber"]
+}
