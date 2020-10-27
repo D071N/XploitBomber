@@ -38,7 +38,7 @@ background-size: cover;
 <div class="container-fluid" >
     <div class="row">
         <div class="col-6 col-sm-6 col-md-5 col-lg-4 mx-auto">
-            <center><font color="#FFF"><h1><b> <font color="#FF0000"> FAT MAN 💣</center></font></b></h1></font><br>
+            <center><font color="#FFF"><h1><b> <font color="#FF0000"> FAT MAN </center></font></b></h1></font><br>
 
             {% if messages %}
             {% for msg in messages %}
@@ -55,19 +55,12 @@ background-size: cover;
             <form action="/doattack/" method="post">
                 {% csrf_token %}
 
+<center><font color="#FFF"><b> <font color="#FF0000"> Number (without +91)</center></font></b></font>
                 <div class="form-group">
                     <input type="text" class="form-control" name="mn" autocomplete="on" placeholder="Target Mobile Number" required>
                 </div>
                 
-                
-                <div class="form-group">
-                    <input type="text" class="form-control" name="mn" autocomplete="on" placeholder="Target Mobile Number" required>
-                </div>
-                
-                <div class="form-group">
-                    <input type="text" class="form-control" name="mn" autocomplete="on" placeholder="Target Mobile Number" required>
-                </div>
-                
+                <center><font color="#FFF"><b> <font color="#FF0000">Number of SmS</center></font></b></font>
                 
                 <div class="form-group">
                     <input type="password" class="form-control" name="fq" placeholder="Number Of Sms" required>
